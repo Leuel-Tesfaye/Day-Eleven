@@ -26,5 +26,34 @@ let [... others]= fruits
 // console.log(fOne,fTwo)
 console.log(others)
 
+// destructuring while iteration 
+
+const countries = [['Finland', 'Helsinki'], ['Sweden', 'Stockholm'], ['Norway', 'Oslo']]
+
+for (const [country, city] of countries) {
+console.log(country, city)
+}
+
+// Spread operator to copy array
+
+const even = [2,4,6,8,10]
+const odd = [1,3,5,7,9]
+
+let [...evenNum] = even
+let [...oddNum] = odd
+let wholeNumber = [...evenNum, ...oddNum]
+console.log(evenNum)
+console.log(oddNum)
+console.log(wholeNumber)
+
+// Spread operator to copy object
+const user = {
+    name : 'Prince',
+    title : 'Front end developer',
+    country : 'Finland',
+    city : 'Ethiopia'
+}
+let users = {...user}
+console.log(users)
 
 
