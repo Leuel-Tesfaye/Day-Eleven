@@ -60,8 +60,26 @@ let [fin,est,...count] = countries
 console.log(fin,est,count) 
 
 //3 . Destructure the rectangle object by its properties or keys.
-let {...rect} = rectangle
-console.log(rect)
+let {...properties} = rectangle
+console.log(Object.keys(properties))
 
 
+// exercise level 2 
+// iterate through the users array and get all the keys of the object using  destructuring 
+for (const user of users) {
+  const {...keys} = user
+  console.log(Object.keys(keys))
+}
 
+// find the person who have less than two skills 
+
+for (const user of users) {
+  const {skills} = user;
+  if (skills && skills.length < 2) {
+    console.log(user);
+  }
+}
+
+// exercise level 3 
+
+// 1. Destructure the countries object print name, capital, population and languages of all countries
